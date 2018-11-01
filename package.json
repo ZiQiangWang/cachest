@@ -1,8 +1,8 @@
 {
   "name": "cachest",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "cache data based on localstorage in browser, support expire time",
-  "main": "index.js",
+  "main": "./lib/cachest.min.js",
   "scripts": {
     "test": "jest",
     "build": "rollup -c"
