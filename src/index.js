@@ -19,7 +19,11 @@ export default {
   // 设置数据，expire为过期时间，单位为毫秒
   set(key, value, expire) {
     if (typeof key !== 'string') {
-      throw new Error('string type is required');
+      throw new Error('Property [key] require string type');
+    }
+
+    if (typeof expire !== 'number') {
+      throw new Error('Property [expire] require number type');
     }
 
     const result = {
