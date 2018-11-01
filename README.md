@@ -1,4 +1,21 @@
-# cachest [![NPM version](https://img.shields.io/npm/v/cachest.svg?style=flat)](https://www.npmjs.com/package/cachest) [![NPM monthly downloads](https://img.shields.io/npm/dm/cachest.svg?style=flat)](https://npmjs.org/package/cachest)
+# cachest
+[![NPM version][npm-badge]][npm-url]
+[![Build Status][travis-badge]][travis-url]
+[![NPM downloads][npm-downloads]][npm-url]
+[![Coverage Status][coveralls-badge]][coveralls-url]
+[![gzip](http://img.badgesize.io/https://unpkg.com/cachest/lib/cachest.min.js?compression=gzip)][unpkg-url]
+
+
+[npm-badge]: https://img.shields.io/npm/v/cachest.svg
+[npm-url]: https://www.npmjs.com/package/cachest
+[npm-downloads]: https://img.shields.io/npm/dm/cachest.svg
+[travis-badge]: https://www.travis-ci.org/ZiQiangWang/cachest.svg?branch=master
+[travis-url]: https://www.travis-ci.org/ZiQiangWang/cachest
+[unpkg-url]: https://unpkg.com/cachest/dist/cachest.min.js
+[coveralls-badge]: https://coveralls.io/repos/ZiQiangWang/cachest/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/ZiQiangWang/cachest
+
+<!-- [![NPM version](https://img.shields.io/npm/v/cachest.svg?style=flat)](https://www.npmjs.com/package/cachest) [![NPM monthly downloads](https://img.shields.io/npm/dm/cachest.svg?style=flat)](https://npmjs.org/package/cachest) -->
 Cache data based on localstorage in browser, expire property is provided.
 
 ## Install
