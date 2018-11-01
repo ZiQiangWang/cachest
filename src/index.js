@@ -22,7 +22,7 @@ export default {
       throw new Error('Property [key] require string type');
     }
 
-    if (typeof expire !== 'number') {
+    if (expire !== undefined && typeof expire !== 'number') {
       throw new Error('Property [expire] require number type');
     }
 
@@ -52,25 +52,31 @@ export default {
   },
   // 清空所有数据
   clear() {
-    for (let index = 0; index < localStorage.length; index++) {
-      const key = localStorage.key(i);
+    const len = localStorage.length;
+    const keys = [];
+    for (let index = 0; index < len; index++) {
+      const key = localStorage.key(index);
       if (key.indexOf(GLOBAL_KEY) === 0) {
-        localStorage.removeItem(key);
+        keys.push(key);
       }
     }
+    keys.forEach(key => {
+      localStorage.removeItem(key);
+    });
   },
   // 获取所有保存的键值
   keys() {
     const len = GLOBAL_KEY.length;
-    const keyLst = [];
+    const keys = [];
     for (let index = 0; index < localStorage.length; index++) {
       const key = localStorage.key(index);
       if (key.indexOf(GLOBAL_KEY) === 0) {
         const pureKey = key.slice(len);
-        this.get(pureKey) && keyLst.push(pureKey);
+        this.get(pureKey) && keys.push(pureKey);
       }
     }
-    return keyLst;
+
+    return keys;
   },
   // 获取数量
   size() {

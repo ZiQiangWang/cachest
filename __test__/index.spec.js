@@ -1,6 +1,8 @@
 import cachest from '../src';
 
 describe('cachest', () => {
+  localStorage.setItem('base', '123');
+
   describe('Test keys', () => {
     test('empty', () => {
       const result = cachest.keys();
@@ -36,6 +38,14 @@ describe('cachest', () => {
   });
 
   describe('Test set/get', () => {
+    test('error type key', () => {
+      expect(cachest.set.bind(null, 12, 'world')).toThrow();
+    })
+
+    test('error type expire', () => {
+      expect(cachest.set.bind(null, 'hello', 'world', '123')).toThrow();
+    })
+
     test('cache string', () => {
       cachest.set('hello', 'world');
       const result = cachest.get('hello');
@@ -127,13 +137,23 @@ describe('cachest', () => {
       expect(result).toBe(false);
     });
   });
+  describe('Test del', () => {
+    test('del', () => {
+      cachest.set('hello', 'world');
+      let result = cachest.get('hello');
+      expect(result).toBe('world');
+      cachest.del('hello');
+      result = cachest.get('hello');
+      expect(result).toBe(null);
+    });
+  })
 
-  test('del', () => {
-    cachest.set('hello', 'world');
-    let result = cachest.get('hello');
-    expect(result).toBe('world');
-    cachest.del('hello');
-    result = cachest.get('hello');
-    expect(result).toBe(null);
-  });
+  describe('Test clear', () => {
+    test('clear', () => {
+      cachest.set('a1', 1);
+      expect(cachest.size()).toBeGreaterThan(0);
+      cachest.clear();
+      expect(cachest.size()).toBe(0);
+    });
+  })
 })
