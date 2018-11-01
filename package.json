@@ -1,0 +1,39 @@
+{
+  "name": "cachest",
+  "version": "0.0.1",
+  "description": "cache data based on localstorage in browser, support expire time",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZiQiangWang/cachest.git"
+  },
+  "keywords": [
+    "cache",
+    "localstorage",
+    "browser",
+    "expire"
+  ],
+  "author": "ZiQiangWang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZiQiangWang/cachest/issues"
+  },
+  "homepage": "https://github.com/ZiQiangWang/cachest#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "jest": "^23.6.0",
+    "regenerator-runtime": "^0.12.1",
+    "rollup": "^0.66.6",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-uglify": "^6.0.0"
+  }
+}
