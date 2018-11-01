@@ -77,5 +77,5 @@ Check if the `key` is expired, return true if key is not existed.
 
 ### License
 
-Copyright © 2018, [Jon Schlinkert](https://github.com/ZiQiangWang).
+Copyright © 2018, [ZiQiangWang](https://github.com/ZiQiangWang).
 Released under the [MIT License](LICENSE).
