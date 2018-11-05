@@ -1,6 +1,6 @@
 {
   "name": "cachest",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "cache data based on localstorage in browser, support expire time",
   "main": "./lib/cachest.min.js",
   "scripts": {

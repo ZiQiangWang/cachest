@@ -11,7 +11,7 @@ function checkExpire (content) {
     return false;
   }
 
-  return new Date().getTime() - content.timestamp > content.expire;
+  return new Date().getTime() > content.expire;
 }
 
 // 用户数据缓存
@@ -30,8 +30,7 @@ export default {
       data: value
     };
     if (expire) {
-      result.timestamp = new Date().getTime();
-      result.expire = expire;
+      result.expire = new Date().getTime() + expire;
     }
 
     localStorage.setItem(GLOBAL_KEY + key, JSON.stringify(result));
