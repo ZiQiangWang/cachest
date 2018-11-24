@@ -11,7 +11,7 @@
 [npm-downloads]: https://img.shields.io/npm/dm/cachest.svg
 [travis-badge]: https://www.travis-ci.org/ZiQiangWang/cachest.svg?branch=master
 [travis-url]: https://www.travis-ci.org/ZiQiangWang/cachest
-[unpkg-url]: https://unpkg.com/cachest/dist/cachest.min.js
+[unpkg-url]: https://unpkg.com/cachest/lib/cachest.min.js
 [coveralls-badge]: https://coveralls.io/repos/ZiQiangWang/cachest/badge.svg?branch=master
 [coveralls-url]: https://coveralls.io/github/ZiQiangWang/cachest
 
